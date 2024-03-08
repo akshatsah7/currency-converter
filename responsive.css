@@ -93,17 +93,29 @@
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 375px) {
   .container {
-      width: 90%;
+      width: 100%;
+      display: flex; /* Ensure container stays fixed */
+      flex-direction: column; /* Stack elements vertically */
   }
 
   .container h2 {
       font-size: 1rem; /* Adjusted font size for smaller screens */
   }
 
+  .container form {
+      display: flex; /* Ensure form stays fixed */
+      flex-direction: column; /* Stack form elements vertically */
+      align-items: center; /* Center form items horizontally */
+  }
+
   .container form .amount input {
       width: 100%; /* Adjusted width for smaller screens */
+  }
+
+  .container form .convert-box {
+      width: 100%; /* Ensure convert box stays fixed */
   }
 
   .container form .convert-box .select-input {
@@ -118,3 +130,4 @@
       height: 32px; /* Adjusted button height for smaller screens */
   }
 }
+

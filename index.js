@@ -9,7 +9,7 @@ const exRateTxt = document.querySelector("form .result");
 
 [fromCur, toCur].forEach((select, i) => {
     for (let curCode in Country_List) {
-        const selected = (i === 0 && curCode === "USD") || (i === 1 && curCode === "GBP") ? "selected" : "";
+        const selected = (i === 0 && curCode === "USD") || (i === 1 && curCode === "INR") ? "selected" : "";
         select.insertAdjacentHTML("beforeend", `<option value="${curCode}" ${selected}>${curCode}</option>`);
     }
     select.addEventListener("change", () => {
