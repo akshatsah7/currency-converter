@@ -1,0 +1,120 @@
+/* style.css */
+
+@media screen and (max-width: 1024px) {
+  .container {
+      width: 90%;
+  }
+
+  .container h2 {
+      font-size: 1.4rem;
+  }
+
+  .container form .amount input {
+      width: 80%;
+  }
+
+  .container form .convert-box .from,
+  .container form .convert-box .to {
+      margin-top: 15px;
+  }
+
+  .container form .convert-box .select-input {
+      padding: 0 15px;
+  }
+
+  .container form .convert-box .reverse {
+      margin-top: 20px;
+  }
+
+  .container form .result {
+      font-size: 1rem;
+  }
+
+  .container form button {
+      height: 38px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+      width: 90%;
+  }
+
+  .container h2 {
+      font-size: 1.2rem;
+  }
+
+  .container form .amount input {
+      width: 90%; /* Adjusted width for tablet screens */
+  }
+
+  .container form .convert-box .select-input {
+      padding: 0 15px;
+  }
+
+  .container form .convert-box .result {
+      font-size: 0.9rem;
+  }
+
+  .container form button {
+      height: 36px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+      width: 90%;
+  }
+
+  .container h2 {
+      font-size: 1.1rem;
+  }
+
+  .container form .amount input {
+      width: 100%; /* Adjusted width for smaller screens */
+  }
+
+  .container form .convert-box .select-input {
+      padding: 0 10px;
+  }
+
+  .container form .convert-box .result {
+      font-size: 0.8rem;
+  }
+
+  .container form button {
+      height: 34px;
+  }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 480px) {
+  .container form .amount input {
+      width: 100%; /* Adjusted width for tablet-sized screens */
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .container {
+      width: 90%;
+  }
+
+  .container h2 {
+      font-size: 1rem; /* Adjusted font size for smaller screens */
+  }
+
+  .container form .amount input {
+      width: 100%; /* Adjusted width for smaller screens */
+  }
+
+  .container form .convert-box .select-input {
+      padding: 0 5px; /* Adjusted padding for smaller screens */
+  }
+
+  .container form .convert-box .result {
+      font-size: 0.7rem; /* Adjusted font size for smaller screens */
+  }
+
+  .container form button {
+      height: 32px; /* Adjusted button height for smaller screens */
+  }
+}

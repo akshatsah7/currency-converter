@@ -1,89 +1,209 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: rgb(104, 103, 103); /* changed background color */
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 10px;
+    background: #221f2f;
+    overflow: hidden;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #ed2ff0;
+    left: 15%;
+    top: 20%;
+    filter: blur(150px);
+    border-radius: 50%;
+    animation: animateBlur1 4s infinite alternate-reverse;
+}
+
+body::after{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #22a8cd;
+    left: 80%;
+    top: 74%;
+    filter: blur(150px);
+    border-radius: 50%;
+    animation: animateBlur2 4s infinite alternate-reverse;
+}
+
+@keyframes animateBlur1 {
+    0% {
+        filter: blur(150px);
+    }
+    100% {
+        filter: blur(20px);
+    }
+}
+
+@keyframes animateBlur2 {
+    0% {
+        filter: blur(150px);
+    }
+    100% {
+        filter: blur(20px);
+    }
 }
 
 .container {
-  background-color: #c5e7e2; /* changed background color */
-  padding: 2rem;
-  border-radius: 1rem;
-  min-height: 45vh;
-  width: 60vh; /* increased width */
+    width: 25rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.44);
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease;
 }
 
-form {
-  margin: 2rem 0 1rem 0;
+.container:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: scale(1.02);
 }
 
-form select,
-button,
-input {
-  width: 100%;
-  border: none;
-  outline: none;
-  border-radius: 0.75rem;
+.container h2{
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+    transition: color 0.5s ease;
 }
 
-form input {
-  border: 1px solid #ccc; /* changed border color */
-  font-size: 1rem;
-  height: 3rem;
-  padding-left: 0.5rem;
+.container:hover h2 {
+    color: #675afe;
 }
 
-.dropdown {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 2rem;
+.container form{
+    margin: 30px 0 10px 0;
 }
 
-.dropdown i {
-  font-size: 1.5rem;
-  margin-top: 1rem;
+.container form p{
+    font-size: 1rem;
+    margin-bottom: 7px;
 }
 
-.select-container img {
-  max-width: 2rem;
+.container form input{
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0 15px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #999;
+    transition: all 0.3s ease;
 }
 
-.select-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 6rem;
-  border-radius: 0.5rem;
-  border: 1px solid #ccc; /* changed border color */
+.container form input:hover{
+    border: 1px solid #675afe;
 }
 
-.select-container select {
-  font-size: 1rem;
-  width: auto;
+.container form input:focus{
+    padding: 0 14px;
+    border: 1px solid #675afe;
+    box-shadow: 0 0 10px rgba(103, 90, 254, 0.5);
 }
 
-.msg {
-  margin: 2rem 0 2rem 0;
+.container form .convert-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
-form button {
-  height: 3rem;
-  background-color: #f16f6f; /* changed button color */
-  color: #fff;
-  font-size: 1.15rem;
-  cursor: pointer;
-  transition: background-color 0.3s; /* added transition */
+.container form .from, .container form .to{
+    width: 100%;
 }
 
-/* hover effect */
-form button:hover {
-  background-color: #fa5656; /* changed button color on hover */
+.container .convert-box .select-input{
+    display: flex;
+    width: 100%;
+    border: 1px solid #999;
+    height: 40px;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0 20px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container .convert-box .select-input:hover{
+    border: 1px solid #675afe;
+}
+
+.container .convert-box .select-input img{
+    max-width: 20px;
+}
+
+.container .convert-box .select-input select{
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    background: none;
+    margin: 0 -5px 0 5px;
+    color: #fff;
+}
+
+.container .convert-box .select-input select option{
+    color: #000;
+}
+
+.container .convert-box .reverse{
+    cursor: pointer;
+    margin-top: 32px;
+    font-size: 22px;
+    transform: rotate(90deg);
+    transition: all 0.3s ease;
+}
+
+.container .convert-box .reverse:hover{
+    color: #675afe;
+    transform: rotate(90deg) scale(1.1);
+}
+
+.container form .result{
+    font-size: 1.1rem;
+    margin: 20px 0 30px;
+}
+
+.container form button{
+    width: 100%;
+    height: 42px;
+    color: #fff;
+    background: #20232c;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.container form button:hover{
+    background: #675afe;
+    border: 1px solid #675afe;
+    transform: scale(1.05);
+}
+
+.container form button:active {
+    transform: translateY(2px);
 }
